@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+    <script>
+        // Run when the page is loaded
+        window.onload = function () {
+            // Get the number of visits from localStorage
+            let visits = localStorage.getItem("visitCount");
+
+            // If it doesn't exist, initialize it to 0
+            if (!visits) {
+                visits = 0;
+            }
+
+            // Increment the visit count
+            visits++;
+
+            // Store the updated count in localStorage
+            localStorage.setItem("visitCount", visits);
+
+            // Show the number of visits in an alert
+            alert(`You have visited this site ${visits} time(s).`);
+        };
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Website</h1>
+</body>
+</html>
